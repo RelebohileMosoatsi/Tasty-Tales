@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Tasty Tales Restaurant - Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background: #ff6f61;
+            color: #333;
+            padding: 4px;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            padding: 20px 0;
+            width: 100%;
+        }
+        .logo img {
+            width: 50px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 0.5rem;
+           }
+        
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav ul li a:hover {
+            background: #555;
+        }
+        .hero {
+            background: url('images/menu2.jpeg') no-repeat center center/cover;
+            color: #fff;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            margin: 0;
+        }
+        .blog-posts {
+            display: flex;
+            justify-content: space-around;
+            padding: 2rem 0;
+        }
+        .post {
+            width: 30%;
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .post img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .post a {
+            color: #333;
+            text-decoration: none;
+            background: #ddd;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        @media (max-width: 768px) {
+    .blog-posts {
+        flex-direction: column;
+        align-items: center;
+    }
+    .post {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+        .post a:hover {
+            background: #ccc;
+            .social-sharing { display: flex; justify-content: space-around; padding: 10px 0; } 
+            .social-sharing a { color: #ff6f61; text-decoration: none; font-size: 1.2em; }
+             .hidden-sections { display: none; }
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .footer-content a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer-content a:hover {
+            text-decoration: underline;
+        }
+        /* Hidden Sections */
+        #delicious-recipes-more, #top-foods-more, #healthy-eating-more {
+            display: none;
+        }
+        h1 { font-weight: 600; animation: color-change 3s infinite;
+         } @keyframes color-change { 0% { color: #ff6f61; } 50% { color: #333; } 100% { color: #ffc061; } }
+    </style>
+</head>
+<body>
+<header>
+        <h1>Blog</h1>
+    <div class="logo">
+        <img src="images/logooo.jpg" alt="restaurant logo">
+    </div>
+</header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Welcome to Tasty Tales Restaurant</h1>
+        <p>Your lifetime dining experience starts here!</p>
+    </div>
+</section>
+<section class="blog-posts">
+    <div class="post">
+        <img src="images/image4.jpeg" alt="Delicious Recipes">
+        <h2>Delicious Recipes to Try</h2>
+        <p>Explore our latest recipes and cooking tips.</p>
+        <a href="https://www.allrecipes.com/gallery/best-dinner-recipes-of-all-time/more">Read more</a>
+    </div>
+    <div class="post">
+        <img src="images/download2.jpeg" alt="Top 10 Foods">
+        <h2>Top 10 Foods to Eat This Summer</h2>
+        <p>Stay cool and satisfied with these delicious meals.</p>
+        <a href="https://www.emedihealth.com/nutrition/best-summer-foods-more">Read more</a>
+    </div>
+    <div class="post">
+        <img src="images/image3.jpeg" alt="Healthy Eating Tips">
+        <h2>Healthy Eating Tips</h2>
+        <p>Discover how to maintain a balanced diet.</p>
+        <a href="https://www.healthline.com/nutrition/how-to-eat-healthy-guidehealthy-eating-more">Read more</a>
+    </div>
+</section>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Tasty Tales. All Rights Reserved.</p>
+        <p>Follow us on:
+             <a href="https://www.facebook.com/FoodNetworkKitchen">Facebook</a> |
+             <a href="https://www.instagram.com/sa_foods/">Instagram</a> |
+              <a href="https://t.co/kUaWg3HCNV">Twitter</a></p> 
+    </div>
+</footer>
+</body>
+</html>

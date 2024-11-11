@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Dynamo - Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showSuccessMessage(event) {
+            event.preventDefault(); // Prevents form submission
+            document.getElementById("successMessage").style.display = "block"; // Shows success message
+            document.getElementById("contactForm").reset(); // Resets form fields
+        }
+    </script>
+    <style>
+        /* Styles for the success message */
+        #successMessage {
+            display: none; /* Hidden by default */
+            padding: 15px;
+            margin-top: 10px;
+            background-color: #4CAF50; /* Green background */
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: chocolate;
+            color:black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 80%;
+            max-width: 500px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+    <section>
+        <form id="contactForm" onsubmit="showSuccessMessage(event)">
+            <h2>Get in Touch</h2>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <!-- Success message appears below the form -->
+        <div id="successMessage">Your message has been successfully delivered!</div>
+    </section>
+    <footer>
+        <p>Tasty Tales. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
