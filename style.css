@@ -10,10 +10,10 @@ body {
 }
 
 header {
-    color: #ff3300;
+    color:gold;
     padding: 20px;
     text-align: center;
-    background: orange;
+    background:#ff3300;
 }
 
 nav {
