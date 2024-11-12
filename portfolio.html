@@ -3,14 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Dynamo - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tasty-Tales - Portfolio</title>
+    
+    <style>
+        header {
+            text-align: center;
+            background-color: #ff6f61;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
+        .Logo img{
+            width: 50px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            display: inline-flex; 
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 15px; 
+        }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: #140303;
+            
+        }
+        .portfolio-intro, .portfolio-item {
+            display: flex;
+            flex-direction: row; 
+            align-items: flex-start;
+            gap: 20px;
+            margin: 20px 0;
+            text-align: justify;
+        }
+        .portfolio-intro img, .portfolio-item img {
+            width: 300px;
+            height: auto;
+        }
+        .portfolio-item img {
+            width: 300px;
+            height: auto;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap: nowrap;
+        }
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+        }
+        h1, h2, h3, h4 {
+            margin: 1px 0;
+            padding: 10px;
+            
+        
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        h1{
+            text-align: center;
+            background-color: #ff6f61;
+            padding: 8px;
+            width: 100%;
+            transition: background-color 0.3s, color 0.3s;
+
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            Width: 100%;
+            length:100%;
+        }
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+        }
+        footer .footer-links li a {
+            color: white;
+            text-decoration: none;
+        }
+        footer .footer-links li a:hover {
+            text-decoration: underline;
+        }
+        footer p {
+            margin: 10px 0 0;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Our Portfolio</h1>
+        <div class="Logo">
+        <img src="images\Tasty.jpg" alt="Logo">
+        </div>
     </header>
-
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -20,15 +140,192 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-
     <section>
         <h2>Recent Projects</h2>
         <p>Check out some of our recent work!</p>
-        <!-- Add portfolio items here -->
-    </section>
+        <div class="portfolio-intro">
+            <img src="images\Fullforce.jpg" alt="Project 1">
+            <div>
+                <article>
+                    <h3>Website Redesign</h3>
+                    <p> In today’s digital age, a business’s online presence serves as its virtual storefront, where 
+                        first impressions are formed, and customer engagement begins. For a startup restaurant, a 
+                        well-designed website is crucial not just for visibility, but for conveying the essence of 
+                        its brand, its culinary philosophy, and its unique offerings. This essay outlines the 
+                        motivation behind redesigning the website for our startup restaurant, highlighting the 
+                        importance of user experience, modern aesthetics, and how these elements contribute to 
+                        fostering meaningful connections with our target audience.
+                        </p>
+                </article>
+                <article>
+                    <h3>Understanding User Experience</h3>
+                    <p> User experience (UX) is at the heart of any successful website. It determines how visitors 
+                        perceive and interact with the site. In the restaurant industry, where aesthetics, 
+                        ambiance, and cuisine are pivotal, the online experience must reflect these values 
+                        seamlessly. With the website acting as a bridge between the restaurant and potential 
+                        diners, it is essential that visitors can navigate effortlessly and find the information 
+                        they seek without frustration.</p>
+                </article>
+                <article>
+                    <h4>Conclusion</h4>
+                    <p> In conclusion, the redesign of our startup restaurant's website is driven by a commitment to 
+                        enhancing user experience and showcasing modern aesthetics that align with our brand values. 
+                        By focusing on creating an intuitive, visually appealing, and engaging online presence, we aim 
+                        to attract new customers, retain loyal patrons, and ultimately carve out a place for ourselves 
+                        in the local dining scene. Our website will not just serve as an online menu; it will be a 
+                        reflection of our culinary passion and a medium for building lasting relationships with our 
+                        community. As we embark on this exciting journey, we recognize that our digital footprint is as 
+                        important as the food we serve—a true representation of the heart and soul of our restaurant.</p>
+                </article>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="images\Food menu.jpg" alt="Menu">
+            <div class="content-container">
+                <div class="content-section">
+                   
+                <div class="content-section">
+                  <section>
+    <h2>Menu</h2>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Add to Cart</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dishes -->
+            <tr>
+                <td>Classic Margherita Pizza</td>
+                <td>A delicious, crowd-pleasing pizza with mozzarella, tomato sauce, and fresh basil.</td>
+                <td>M100.00</td>
+                <td><input type="number" value="0" min="0" id="pizzaQuantity"></td>
+                <td><button onclick="addToCart('Classic Margherita Pizza', 100.00, document.getElementById('pizzaQuantity').value)">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td>Grilled Salmon with Seasonal Vegetables</td>
+                <td>A healthy, protein-rich dish featuring Atlantic salmon paired with seasonal vegetables.</td>
+                <td>M120.00</td>
+                <td><input type="number" value="0" min="0" id="salmonQuantity"></td>
+                <td><button onclick="addToCart('Grilled Salmon', 120.00, document.getElementById('salmonQuantity').value)">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td>Vegan Buddha Bowl</td>
+                <td>A nutrient-packed bowl with quinoa, chickpeas, avocado, and seasonal veggies.</td>
+                <td>M75.00</td>
+                <td><input type="number" value="0" min="0" id="veganBowlQuantity"></td>
+                <td><button onclick="addToCart('Vegan Buddha Bowl', 75.00, document.getElementById('veganBowlQuantity').value)">Add to Cart</button></td>
+            </tr>
+            <!-- Drinks -->
+            <tr>
+                <td>Freshly Squeezed Lemonade</td>
+                <td>A refreshing, natural lemonade made from organic lemons.</td>
+                <td>M50.00</td>
+                <td><input type="number" value="0" min="0" id="lemonadeQuantity"></td>
+                <td><button onclick="addToCart('Freshly Squeezed Lemonade', 50.00, document.getElementById('lemonadeQuantity').value)">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td>Cold Brew Coffee</td>
+                <td>A smooth, refreshing coffee made with cold-brewed coffee beans.</td>
+                <td>M40.00</td>
+                <td><input type="number" value="0" min="0" id="coldBrewQuantity"></td>
+                <td><button onclick="addToCart('Cold Brew Coffee',40.00 , document.getElementById('coldBrewQuantity').value)">Add to Cart</button></td>
+            </tr>
+            <!-- Desserts -->
+            <tr>
+                <td>Chocolate Lava Cake</td>
+                <td>A rich, decadent dessert with a warm, gooey center made from premium dark chocolate.</td>
+                <td>M50.00</td>
+                <td><input type="number" value="0" min="0" id="lavaCakeQuantity"></td>
+                <td><button onclick="addToCart('Chocolate Lava Cake', 50.00, document.getElementById('lavaCakeQuantity').value)">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td>Seasonal Fruit Tart</td>
+                <td>A light, fruity tart made with fresh seasonal fruit and a buttery crust.</td>
+                <td>M45.00</td>
+                <td><input type="number" value="0" min="0" id="fruitTartQuantity"></td>
+                <td><button onclick="addToCart('Seasonal Fruit Tart', 45.00, document.getElementById('fruitTartQuantity').value)">Add to Cart</button></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<script>
+    // Initialize an empty cart
+    let cart = [];
 
-    <footer>
-        <p>&copy; 2024 Digital Dynamo. All Rights Reserved.</p>
+    // Function to add items to the cart
+    function addToCart(item, price, quantity) {
+        quantity = parseInt(quantity);
+        if (quantity > 0) {
+            // Check if item is already in the cart
+            let existingItem = cart.find(cartItem => cartItem.item === item);
+            if (existingItem) {
+                // Update the quantity of the existing item
+                existingItem.quantity += quantity;
+            } else {
+                // Add a new item to the cart
+                cart.push({ item, price, quantity });
+            }
+            alert(`M{item} has been added to your cart.`);
+            displayCart();
+        } else {
+            alert('Please select a quantity greater than 0.');
+        }
+    }
+
+    // Function to display the cart items and total price
+    function displayCart() {
+        let cartHTML = "<h2>Your Cart</h2>";
+        let total = 0;
+
+        if (cart.length === 0) {
+            cartHTML += "<p>Your cart is empty.</p>";
+        } else {
+            cartHTML += "<table border='1' cellpadding='10'><thead><tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th></tr></thead><tbody>";
+
+            // Display each cart item
+            cart.forEach(cartItem => {
+                let itemTotal = cartItem.price * cartItem.quantity;
+                total += itemTotal;
+                cartHTML += `<tr><td>M{cartItem.item}</td><td>MM{cartItem.price.toFixed(2)}</td><td>M{cartItem.quantity}</td><td>MM{itemTotal.toFixed(2)}</td></tr>`;
+            });
+
+            cartHTML += "</tbody></table>";
+            cartHTML += `<p><strong>Total: MM{total.toFixed(2)}</strong></p>`;
+            cartHTML += "<button onclick='checkout()'>Proceed to Checkout</button>";
+        }
+
+        // Display the cart HTML
+        document.getElementById("cartDisplay").innerHTML = cartHTML;
+    }
+
+    // Function to handle checkout
+    function checkout() {
+        if (cart.length === 0) {
+            alert('Your cart is empty. Please add some items before checking out.');
+        } else {
+            alert('Thank you for your purchase! Your order will be processed shortly.');
+            cart = []; // Clear the cart after checkout
+            displayCart(); // Update the cart display
+        }
+    }
+</script>
+<section>
+    <div id="cartDisplay"></div> <!-- This is where the cart will be displayed -->
+</section>
+
+    <footer><footer style="display: flex; justify-content: center; align-items: center; height: 100px; background-color: #333; color: white;">
+        <p>&copy; 2024 Tasty-Tales. All Rights Reserved.</p>
+        <p>Follow us on:
+        <ul class="footer-links">
+            <li><a href="https://www.facebook.com/FoodNetworkKitchen">Facebook</a></li>
+            <li><a href="https://www.instagram.com/sa_foods">Instagram</a></li>
+            <li><a href="https://t.co/kUaWg3HCNV">Twitter</a></li></p>
+        </ul>
     </footer>
 </body>
 </html>
