@@ -96,31 +96,36 @@
 
         }
         footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 20px;
-            Width: 100%;
-            length:100%;
-        }
-        footer .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            list-style: none;
-            padding: 0;
-        }
-        footer .footer-links li a {
-            color: white;
-            text-decoration: none;
-        }
-        footer .footer-links li a:hover {
-            text-decoration: underline;
-        }
-        footer p {
-            margin: 10px 0 0;
-            font-size: 0.9em;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+footer .footer-links li a {
+    color: white;
+    text-decoration: none;
+}
+footer .footer-links li a:hover {
+    text-decoration: underline;
+}
+footer p {
+    margin: 10px 0 0;
+    font-size: 0.9em;
+}
+
+        
         }
     </style>
 </head>
@@ -318,8 +323,7 @@
     <div id="cartDisplay"></div> <!-- This is where the cart will be displayed -->
 </section>
 
-    <footer><footer style="display: flex; justify-content: center; align-items: center; height: 100px; background-color: #333; color: white;">
-        <p>&copy; 2024 Tasty-Tales. All Rights Reserved.</p>
+    <footer>
         <p>Follow us on:
         <ul class="footer-links">
             <li><a href="https://www.facebook.com/FoodNetworkKitchen">Facebook</a></li>
