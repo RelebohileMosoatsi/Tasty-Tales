@@ -10,9 +10,10 @@ body {
 }
 
 header {
-    color: orange;
+    color: gold;
     padding: 20px;
     text-align: center;
+    background: orange;
 }
 
 nav {
@@ -73,7 +74,7 @@ form button {
     background: #333
 }
 .boundry{
-    background-color: yellow;
+    background-color: black;
     font-size: larger;
     text-align: center;   
 }
