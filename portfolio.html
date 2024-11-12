@@ -181,80 +181,141 @@
             <img src="images\Food menu.jpg" alt="Menu">
             <div class="content-container">
                 <div class="content-section">
-                    <h3>1. Signature Dishes</h3>
-                    <section>
-                        <h4>Classic Margherita Pizza</h4>
-                        <ul>
-                            <li>Purpose: A delicious, crowd-pleasing pizza...</li>
-                            <li>Advantages: Hand-tossed dough...</li>
-                            <li>Sizes: Available in small, medium, and large.</li>
-                            <li>Ingredients: Premium mozzarella...</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h4>Grilled Salmon with Seasonal Vegetables</h4>
-                        <ul>
-                            <li>Purpose: A healthy, protein-rich dish...</li>
-                            <li>Advantages: High-quality Atlantic salmon...</li>
-                            <li>Sizes: Standard 8 oz portion; family size.</li>
-                            <li>Ingredients: Fresh Atlantic salmon...</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h4>Vegan Buddha Bowl</h4>
-                        <ul>
-                            <li>Purpose: A nutrient-packed bowl...</li>
-                            <li>Advantages: Packed with fiber and plant-based protein...</li>
-                            <li>Sizes: One size (12 oz bowl).</li>
-                            <li>Ingredients: Quinoa, chickpeas, avocado...</li>
-                        </ul>
-                    </section>
-                </div>
+                   
                 <div class="content-section">
-                    <h3>2. Drinks</h3>
-                    <section>
-                        <h4>Freshly Squeezed Lemonade</h4>
-                        <ul>
-                            <li>Purpose: A refreshing, natural beverage...</li>
-                            <li>Advantages: Made with organic lemons...</li>
-                            <li>Sizes: Small (12 oz), Large (16 oz).</li>
-                            <li>Ingredients: Organic lemons...</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h4>Cold Brew Coffee</h4>
-                        <ul>
-                            <li>Purpose: A smooth and refreshing coffee drink...</li>
-                            <li>Advantages: Brewed for a rich flavor...</li>
-                            <li>Sizes: Available in small and large.</li>
-                            <li>Ingredients: Cold-brewed coffee beans, water...</li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="content-section">
-                    <h3>3. Desserts</h3>
-                    <section>
-                        <h4>Chocolate Lava Cake</h4>
-                        <ul>                    
-                            <li>Purpose: A rich, decadent dessert perfect for chocolate lovers.</li>
-                            <li>Advantages: Warm, gooey center made from premium dark chocolate.</li>
-                            <li>Sizes: Single serving (4 oz).</li>
-                            <li>Ingredients: Dark chocolate, butter, eggs, sugar, flour.</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h3>Seasonal Fruit Tart</h3>
-                        <ul>
-                            <li>Purpose: A light, fruity dessert to end the meal on a sweet note.</li>
-                            <li>Advantages: Fresh, locally-sourced seasonal fruit atop a buttery crust.</li>
-                            <li>Sizes: Single serving (5” tart).</li>
-                            <li>Ingredients: Butter crust, pastry cream, seasonal fruit.</li>
-                        </ul>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </section>
+                  <section>
+    <h2>Menu</h2>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Add to Cart</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dishes -->
+            <tr>
+                <td>Classic Margherita Pizza</td>
+                <td>A delicious, crowd-pleasing pizza with mozzarella, tomato sauce, and fresh basil.</td>
+                <td>$12.99</td>
+                <td><input type="number" value="0" min="0" id="pizzaQuantity"></td>
+                <td><button onclick="addToCart('Classic Margherita Pizza', 12.99, document.getElementById('pizzaQuantity').value)">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td>Grilled Salmon with Seasonal Vegetables</td>
+                <td>A healthy, protein-rich dish featuring Atlantic salmon paired with seasonal vegetables.</td>
+                <td>$22.99</td>
+                <td><input type="number" value="0" min="0" id="salmonQuantity"></td>
+                <td><button onclick="addToCart('Grilled Salmon', 22.99, document.getElementById('salmonQuantity').value)">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td>Vegan Buddha Bowl</td>
+                <td>A nutrient-packed bowl with quinoa, chickpeas, avocado, and seasonal veggies.</td>
+                <td>$14.99</td>
+                <td><input type="number" value="0" min="0" id="veganBowlQuantity"></td>
+                <td><button onclick="addToCart('Vegan Buddha Bowl', 14.99, document.getElementById('veganBowlQuantity').value)">Add to Cart</button></td>
+            </tr>
+            <!-- Drinks -->
+            <tr>
+                <td>Freshly Squeezed Lemonade</td>
+                <td>A refreshing, natural lemonade made from organic lemons.</td>
+                <td>$4.99</td>
+                <td><input type="number" value="0" min="0" id="lemonadeQuantity"></td>
+                <td><button onclick="addToCart('Freshly Squeezed Lemonade', 4.99, document.getElementById('lemonadeQuantity').value)">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td>Cold Brew Coffee</td>
+                <td>A smooth, refreshing coffee made with cold-brewed coffee beans.</td>
+                <td>$5.99</td>
+                <td><input type="number" value="0" min="0" id="coldBrewQuantity"></td>
+                <td><button onclick="addToCart('Cold Brew Coffee', 5.99, document.getElementById('coldBrewQuantity').value)">Add to Cart</button></td>
+            </tr>
+            <!-- Desserts -->
+            <tr>
+                <td>Chocolate Lava Cake</td>
+                <td>A rich, decadent dessert with a warm, gooey center made from premium dark chocolate.</td>
+                <td>$6.99</td>
+                <td><input type="number" value="0" min="0" id="lavaCakeQuantity"></td>
+                <td><button onclick="addToCart('Chocolate Lava Cake', 6.99, document.getElementById('lavaCakeQuantity').value)">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td>Seasonal Fruit Tart</td>
+                <td>A light, fruity tart made with fresh seasonal fruit and a buttery crust.</td>
+                <td>$5.49</td>
+                <td><input type="number" value="0" min="0" id="fruitTartQuantity"></td>
+                <td><button onclick="addToCart('Seasonal Fruit Tart', 5.49, document.getElementById('fruitTartQuantity').value)">Add to Cart</button></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<script>
+    // Initialize an empty cart
+    let cart = [];
+
+    // Function to add items to the cart
+    function addToCart(item, price, quantity) {
+        quantity = parseInt(quantity);
+        if (quantity > 0) {
+            // Check if item is already in the cart
+            let existingItem = cart.find(cartItem => cartItem.item === item);
+            if (existingItem) {
+                // Update the quantity of the existing item
+                existingItem.quantity += quantity;
+            } else {
+                // Add a new item to the cart
+                cart.push({ item, price, quantity });
+            }
+            alert(`${item} has been added to your cart.`);
+            displayCart();
+        } else {
+            alert('Please select a quantity greater than 0.');
+        }
+    }
+
+    // Function to display the cart items and total price
+    function displayCart() {
+        let cartHTML = "<h2>Your Cart</h2>";
+        let total = 0;
+
+        if (cart.length === 0) {
+            cartHTML += "<p>Your cart is empty.</p>";
+        } else {
+            cartHTML += "<table border='1' cellpadding='10'><thead><tr><th>Item</th><th>Price</th><th>Quantity</th><th>Total</th></tr></thead><tbody>";
+
+            // Display each cart item
+            cart.forEach(cartItem => {
+                let itemTotal = cartItem.price * cartItem.quantity;
+                total += itemTotal;
+                cartHTML += `<tr><td>${cartItem.item}</td><td>$${cartItem.price.toFixed(2)}</td><td>${cartItem.quantity}</td><td>$${itemTotal.toFixed(2)}</td></tr>`;
+            });
+
+            cartHTML += "</tbody></table>";
+            cartHTML += `<p><strong>Total: $${total.toFixed(2)}</strong></p>`;
+            cartHTML += "<button onclick='checkout()'>Proceed to Checkout</button>";
+        }
+
+        // Display the cart HTML
+        document.getElementById("cartDisplay").innerHTML = cartHTML;
+    }
+
+    // Function to handle checkout
+    function checkout() {
+        if (cart.length === 0) {
+            alert('Your cart is empty. Please add some items before checking out.');
+        } else {
+            alert('Thank you for your purchase! Your order will be processed shortly.');
+            cart = []; // Clear the cart after checkout
+            displayCart(); // Update the cart display
+        }
+    }
+</script>
+<section>
+    <div id="cartDisplay"></div> <!-- This is where the cart will be displayed -->
+</section>
+
     <footer>
         <p>&copy; 2024 Tasty-Tales. All Rights Reserved.</p>
         <p>Follow us on:
