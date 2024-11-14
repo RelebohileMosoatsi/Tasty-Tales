@@ -255,15 +255,15 @@
             <div id="cartDisplay"></div>
         </div>
     </section>
-    <footer>
-        <p>Follow us on:</p>
-        <ul class="footer-links">
-            <li><a href="https://www.facebook.com/FoodNetworkKitchen">Facebook</a></li>
-            <li><a href="https://www.instagram.com/sa_foods">Instagram</a></li>
-            <li><a href="https://t.co/kUaWg3HCNV">Twitter</a></li>
-        </ul>
-    </footer>
     
+    <style>
+        .cart-item { margin-bottom: 20px; }
+        .cart-total { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div id="cart-container"></div>
+
     <script>
         let cart = [];
 
@@ -283,22 +283,34 @@
             }
         }
 
+        function updateQuantity(index, newQuantity) {
+            const quantity = parseInt(newQuantity);
+            if (quantity >= 0) {
+                cart[index].quantity = quantity;
+                displayCart();
+            }
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            displayCart();
+        }
+
         function displayCart() {
             let cartHTML = "<h2>Your Cart</h2>";
             let total = 0;
 
             if (cart.length === 0) {
-                cartHTML += "<p>Your cart is empty.</p>"; 
-            }
-        else {
+                cartHTML += "<p>Your cart is empty.</p>";
+            } else {
                 cart.forEach((item, index) => {
                     const itemTotal = item.price * item.quantity;
                     total += itemTotal;
-                    
+
                     cartHTML += `
                         <div class="cart-item">
                             <h3>${item.item}</h3>
-                            <p>Price: $${item.price.toFixed(2)}</p>
+                            <p>Price: M${item.price.toFixed(2)}</p>
                             <p>
                                 Quantity: 
                                 <input 
@@ -309,7 +321,7 @@
                                     onchange="updateQuantity(${index}, this.value)"
                                 >
                             </p>
-                            <p>Subtotal: $${itemTotal.toFixed(2)}</p>
+                            <p>Subtotal: M${itemTotal.toFixed(2)}</p>
                             <button class="remove-btn" onclick="removeFromCart(${index})">
                                 Remove
                             </button>
@@ -319,12 +331,26 @@
 
                 cartHTML += `
                     <div class="cart-total">
-                        Total: $${total.toFixed(2)}
+                        Total: M${total.toFixed(2)}
                     </div>
                 `;
             }
 
             document.getElementById('cart-container').innerHTML = cartHTML;
         }
+
+        // Example usage
+        // addToCart('Apple', 0.5, 3); // Uncomment to test adding items
+        // addToCart('Banana', 0.75, 2); // Uncomment to test adding items
+
     </script>
-    </html>
+</body>
+<footer>
+    <p>Follow us on:</p>
+    <ul class="footer-links">
+        <li><a href="https://www.facebook.com/FoodNetworkKitchen">Facebook</a></li>
+        <li><a href="https://www.instagram.com/sa_foods">Instagram</a></li>
+        <li><a href="https://t.co/kUaWg3HCNV">Twitter</a></li>
+    </ul>
+</footer>
+</html>
