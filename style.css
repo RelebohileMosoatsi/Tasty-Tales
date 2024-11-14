@@ -73,3 +73,7 @@ form input, form textarea {
 form button {
     background: #333;
 }
+.boundry{
+    background:black;
+    text-align:center;
+}
