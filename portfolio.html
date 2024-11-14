@@ -80,6 +80,27 @@
             padding: 8px;
             transition: background-color 0.3s, color 0.3s;
         }
+        .cart-item { margin-bottom: 20px; }
+        .cart-total { font-weight: bold; }
+
+        /* Payment button styles */
+        .payment-btn {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .payment-btn:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
         footer { 
             background-color: #333; 
             color: white; 
@@ -264,6 +285,7 @@
 <body>
     <div id="cart-container"></div>
 
+
     <script>
         let cart = [];
 
@@ -333,6 +355,7 @@
                     <div class="cart-total">
                         Total: M${total.toFixed(2)}
                     </div>
+                    <a href="payment.html" class="payment-btn">Proceed to Payment</a>
                 `;
             }
 
@@ -340,8 +363,9 @@
         }
 
         // Example usage
-        // addToCart('Apple', 0.5, 3); // Uncomment to test adding items
-        // addToCart('Banana', 0.75, 2); // Uncomment to test adding items
+        // Uncomment below lines to test adding items to the cart
+        // addToCart('Classic Margherita Pizza', 100.00, 1);
+        // addToCart('Grilled Salmon', 120.00, 2);
 
     </script>
 </body>
